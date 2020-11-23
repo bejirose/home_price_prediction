@@ -6,10 +6,13 @@
     <meta name="description" content="">
     <title>House Pricing Model</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/">
+   <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/"> -->
 
     <!-- Bootstrap core CSS -->
-<link href="http://getbootstrap.com/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<!--link href="http://getbootstrap.com/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+
 
     <!-- Favicons -->
 <link rel="apple-touch-icon" href="http://getbootstrap.com/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -20,7 +23,6 @@
 <link rel="icon" href="http://getbootstrap.com/docs/4.5/assets/img/favicons/favicon.ico">
 <meta name="msapplication-config" content="http://getbootstrap.com/docs/4.5/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#563d7c">
-
 
     <style>
       .bd-placeholder-img {
@@ -38,8 +40,8 @@
         }
       }
     </style>
-    <!-- Custom styles for this template -->
-    <!-- link rel="stylesheet" href="./static/css/dashboard.css" > -->
+    <!-- Custom styles for this template 
+    <link rel="stylesheet" href="./static/css/dashboard.css" > -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}" >
     
   </head>
@@ -284,9 +286,10 @@
   </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="http://getbootstrap.com/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')
+       <!-- <script>window.jQuery || document.write('<script src="http://getbootstrap.com/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')
       </script>
-      <script src="http://getbootstrap.com/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+      <script src="http://getbootstrap.com/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
         <script src="./static/js/dashboard.js"></script></body>
