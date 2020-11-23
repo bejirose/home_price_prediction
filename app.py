@@ -104,6 +104,11 @@ def introduction():
 def plot1():
     # Return the template
     return render_template('plot1.html')
+    
+@app.route('/model')
+def model():
+    # Return the template
+    return render_template('model.html')
 
 @app.route('/predict1')
 def predict1():
