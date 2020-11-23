@@ -1,6 +1,7 @@
 # 1. import Flask
 from flask import Flask, render_template, redirect, jsonify, request
 import numpy as np
+import urllib.parse as urlparse
 # 2. Create an app, being sure to pass __name__
 app = Flask(__name__)
 
