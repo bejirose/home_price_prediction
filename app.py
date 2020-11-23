@@ -13,32 +13,33 @@ import urllib.parse as urlparse
 app = Flask(__name__)
 
 
-from sqlalchemy import create_engine
-import psycopg2
-
 #from config import username, password
 import os
 engine = os.environ.get('DB_USER_NAME')
-# password = os.environ.get('DB_PASSWORD')
-# DATABASE_URL will contain the database connection string:
-# database_url = os.environ.get('DATABASE_URL')
 
-# from sqlalchemy import create_engine
-# engine = create_engine(f'postgresql://{username}:{password}@localhost:5432/house_db')
-# engine = create_engine(database_url)
-#connection = engine.connect()
-# connection = psycopg2.connect(user = username,
-#                                   password = password,
-#                                   host = "localhost",
-#                                   port = "5432",
-#                                   database = "house_db")
+import psycopg2
 
-connection = psycopg2.connect(user = engine,
-                                  password = "2f928e782658af3577b328d15cb1f121f70e39c7b08126c89ae45a0b10d7a24b",
-                                  host = "ec2-3-218-75-21.compute-1.amazonaws.com",
-                                  port = "5432",
-                                  database = "d96ct7ttbardt7")
+#from config import username, password
 
+url = urlparse.urlparse(os.environ['DATABASE_URL'])
+dbname = url.path[1:]
+user = url.username
+password = url.password
+host = url.hostname
+port = url.port
+
+
+from sqlalchemy import create_engine
+#engine = create_engine(f'postgresql://{username}:{password}@localhost:5432/World_power_plant')
+engine = create_engine(os.environ.get('DATABASE_URL', ''))
+
+connection = psycopg2.connect(
+            dbname=dbname,
+            user=user,
+            password=password,
+            host=host,
+            port=port
+            )
 cursor = connection.cursor()
 
 # top10ussql = 'select * from zillow_data LIMIT 10'
