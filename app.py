@@ -93,7 +93,6 @@ cursor = connection.cursor()
 
 @app.route('/')
 def index():
-    print(username, password)
     # Return the template
     return render_template('index.html')
 
