@@ -46,16 +46,16 @@ body {
 
 .sidebar .nav-link {
   font-weight: 500;
-  color: #333;
+  color: #aaa;
 }
 
 .sidebar .nav-link .feather {
   margin-right: 4px;
-  color: #999;
+  color: #000;
 }
 
 .sidebar .nav-link.active {
-  color: #007bff;
+  color: #111;
 }
 
 .sidebar .nav-link:hover .feather,
@@ -76,8 +76,8 @@ body {
   padding-top: .75rem;
   padding-bottom: .75rem;
   font-size: 1rem;
-  background-color: rgba(0, 0, 0, .25);
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+  background-color: rgba(120, 120, 0, .5);
+  box-shadow: inset -1px 0 0 rgba(120, 120, 0, .5);
 }
 
 .navbar .navbar-toggler {
@@ -100,4 +100,25 @@ body {
 .form-control-dark:focus {
   border-color: transparent;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+.sidebar-sticky {
+  color: #fff;
+  background-color: rgba(0, 163, 200, 0.4);
+  border-color: rgba(0, 163, 200, 0.4);
+}
+
+.login { 
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	margin: -150px 0 0 -150px;
+	width:400px;
+	height:400px;
+}
+
+.test {
+  color: #fff;
+  background-color: rgba(15, 33, 17, 0.8);
+  border-color: rgba(0, 160, 20, .8);
 }
